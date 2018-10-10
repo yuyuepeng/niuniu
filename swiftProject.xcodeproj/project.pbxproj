@@ -22,6 +22,7 @@
 		C1A13665216CBCEC00A29572 /* swiftProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A13664216CBCEC00A29572 /* swiftProjectTests.swift */; };
 		C1A13670216CBCEC00A29572 /* swiftProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A1366F216CBCEC00A29572 /* swiftProjectUITests.swift */; };
 		C1DA12CE216DFCED00E8D928 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DA12CD216DFCED00E8D928 /* BaseController.swift */; };
+		C1DA12D4216E05E600E8D928 /* HomeOneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DA12D3216E05E600E8D928 /* HomeOneCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		C1A1366F216CBCEC00A29572 /* swiftProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftProjectUITests.swift; sourceTree = "<group>"; };
 		C1A13671216CBCEC00A29572 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1DA12CD216DFCED00E8D928 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		C1DA12D3216E05E600E8D928 /* HomeOneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOneCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 		C1DA12D1216E04F500E8D928 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C1DA12D3216E05E600E8D928 /* HomeOneCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				C19C8D1D216DC9DA00791C55 /* MineController.swift in Sources */,
 				C1A13650216CBCE900A29572 /* AppDelegate.swift in Sources */,
 				C19C8D15216DC8FA00791C55 /* HomeController.swift in Sources */,
+				C1DA12D4216E05E600E8D928 /* HomeOneCell.swift in Sources */,
 				C19C8D1B216DC9CC00791C55 /* CollectionController.swift in Sources */,
 				C19C8D17216DC97F00791C55 /* SelectController.swift in Sources */,
 				C19C8D19216DC9BA00791C55 /* PublishController.swift in Sources */,
