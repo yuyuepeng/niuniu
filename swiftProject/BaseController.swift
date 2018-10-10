@@ -1,5 +1,5 @@
 //
-//  SelectController.swift
+//  BaseController.swift
 //  swiftProject
 //
 //  Created by 玉岳鹏 on 2018/10/10.
@@ -8,12 +8,11 @@
 
 import UIKit
 
-class SelectController: UIViewController {
+class BaseController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.view.backgroundColor = UIColor.gray
-
+        self.navigationController?.navigationBar.isHidden = true
         // Do any additional setup after loading the view.
     }
     

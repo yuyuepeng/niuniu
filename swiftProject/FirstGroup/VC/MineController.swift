@@ -1,5 +1,5 @@
 //
-//  HomeController.swift
+//  MineController.swift
 //  swiftProject
 //
 //  Created by 玉岳鹏 on 2018/10/10.
@@ -8,11 +8,12 @@
 
 import UIKit
 
-class HomeController: UIViewController {
+class MineController: BaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.view.backgroundColor = UIColor.blue
+//        self.view.backgroundColor = UIColor.green
+
         // Do any additional setup after loading the view.
     }
     

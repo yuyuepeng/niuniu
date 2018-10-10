@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CollectionController: UIViewController {
+class CollectionController: BaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

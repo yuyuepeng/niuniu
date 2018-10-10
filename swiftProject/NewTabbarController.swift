@@ -9,7 +9,6 @@
 import UIKit
 
 class NewTabbarController: UITabBarController,UITabBarControllerDelegate {
-    let singleLength:CGFloat = YYScreenWidth/750.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,12 +47,12 @@ class NewTabbarController: UITabBarController,UITabBarControllerDelegate {
         vc.tabBarItem.selectedImage = UIImage.init(named: selectedImage)?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         vc.tabBarItem.titlePositionAdjustment = UIOffset.init(horizontal: 0, vertical: -2)
         let textAttrs:NSMutableDictionary = NSMutableDictionary()
-        textAttrs .setValue(UIFont.systemFont(ofSize: 10 * self.singleLength), forKey: NSAttributedString.Key.font.rawValue)
+        textAttrs .setValue(UIFont.systemFont(ofSize: 10 * singleLength), forKey: NSAttributedString.Key.font.rawValue)
         textAttrs.setValue(UIColor.white, forKey: NSAttributedString.Key.foregroundColor.rawValue)
         
         let selectedTextAttrs:NSMutableDictionary = NSMutableDictionary()
         selectedTextAttrs .setValue(UIColor.white, forKey: NSAttributedString.Key.foregroundColor.rawValue)
-        selectedTextAttrs.setValue(UIFont.systemFont(ofSize: 10 * self.singleLength), forKey: NSAttributedString.Key.font.rawValue)
+        selectedTextAttrs.setValue(UIFont.systemFont(ofSize: 10 * singleLength), forKey: NSAttributedString.Key.font.rawValue)
         
         vc.tabBarItem .setTitleTextAttributes(selectedTextAttrs as? [NSAttributedString.Key : Any], for: UIControl.State.selected)
         vc.tabBarItem .setTitleTextAttributes(textAttrs as? [NSAttributedString.Key: Any], for: UIControl.State.normal)

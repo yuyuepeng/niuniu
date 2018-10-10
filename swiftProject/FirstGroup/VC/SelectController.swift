@@ -1,5 +1,5 @@
 //
-//  MineController.swift
+//  SelectController.swift
 //  swiftProject
 //
 //  Created by 玉岳鹏 on 2018/10/10.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class MineController: UIViewController {
+class SelectController: BaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.view.backgroundColor = UIColor.green
+//        self.view.backgroundColor = UIColor.gray
 
         // Do any additional setup after loading the view.
     }

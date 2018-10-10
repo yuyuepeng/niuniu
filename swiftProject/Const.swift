@@ -18,6 +18,7 @@ let YYScreenWidth = UIScreen.main.bounds.size.width
 let YYScreenHeigth = UIScreen.main.bounds.size.height
 let DominantColor = UIColor.init(red: 242/255.0, green: 77/255.0, blue: 51/255.0, alpha: 1)
 let FooterViewColor = UIColor.init(red: 240/255.0, green: 241/255.0, blue: 244/255.0, alpha: 1)
+let singleLength:CGFloat = YYScreenWidth/750.0
 
 // iphone X
 let isIphoneX = YYScreenHeigth == 812 ? true : false

@@ -21,6 +21,7 @@
 		C1A1365A216CBCEB00A29572 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1A13658216CBCEB00A29572 /* LaunchScreen.storyboard */; };
 		C1A13665216CBCEC00A29572 /* swiftProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A13664216CBCEC00A29572 /* swiftProjectTests.swift */; };
 		C1A13670216CBCEC00A29572 /* swiftProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A1366F216CBCEC00A29572 /* swiftProjectUITests.swift */; };
+		C1DA12CE216DFCED00E8D928 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DA12CD216DFCED00E8D928 /* BaseController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		C1A1366B216CBCEC00A29572 /* swiftProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A1366F216CBCEC00A29572 /* swiftProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftProjectUITests.swift; sourceTree = "<group>"; };
 		C1A13671216CBCEC00A29572 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1DA12CD216DFCED00E8D928 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +114,9 @@
 			isa = PBXGroup;
 			children = (
 				C1A1364F216CBCE900A29572 /* AppDelegate.swift */,
+				C1DA12CD216DFCED00E8D928 /* BaseController.swift */,
 				C12EC3E2216DA2480087B495 /* NewTabbarController.swift */,
-				C19C8D14216DC8FA00791C55 /* HomeController.swift */,
-				C19C8D16216DC97F00791C55 /* SelectController.swift */,
-				C19C8D18216DC9BA00791C55 /* PublishController.swift */,
-				C19C8D1A216DC9CC00791C55 /* CollectionController.swift */,
-				C19C8D1C216DC9DA00791C55 /* MineController.swift */,
+				C1DA12CF216E04CB00E8D928 /* FirstGroup */,
 				C1A13651216CBCE900A29572 /* ViewController.swift */,
 				C12EC3F8216DA75B0087B495 /* Const.swift */,
 				C1A13653216CBCE900A29572 /* Main.storyboard */,
@@ -144,6 +143,42 @@
 				C1A13671216CBCEC00A29572 /* Info.plist */,
 			);
 			path = swiftProjectUITests;
+			sourceTree = "<group>";
+		};
+		C1DA12CF216E04CB00E8D928 /* FirstGroup */ = {
+			isa = PBXGroup;
+			children = (
+				C1DA12D2216E050D00E8D928 /* Model */,
+				C1DA12D1216E04F500E8D928 /* View */,
+				C1DA12D0216E04E500E8D928 /* VC */,
+			);
+			path = FirstGroup;
+			sourceTree = "<group>";
+		};
+		C1DA12D0216E04E500E8D928 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				C19C8D14216DC8FA00791C55 /* HomeController.swift */,
+				C19C8D16216DC97F00791C55 /* SelectController.swift */,
+				C19C8D18216DC9BA00791C55 /* PublishController.swift */,
+				C19C8D1A216DC9CC00791C55 /* CollectionController.swift */,
+				C19C8D1C216DC9DA00791C55 /* MineController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		C1DA12D1216E04F500E8D928 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C1DA12D2216E050D00E8D928 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +314,7 @@
 			files = (
 				C1A13652216CBCE900A29572 /* ViewController.swift in Sources */,
 				C12EC3F9216DA75B0087B495 /* Const.swift in Sources */,
+				C1DA12CE216DFCED00E8D928 /* BaseController.swift in Sources */,
 				C12EC3E3216DA2480087B495 /* NewTabbarController.swift in Sources */,
 				C19C8D1D216DC9DA00791C55 /* MineController.swift in Sources */,
 				C1A13650216CBCE900A29572 /* AppDelegate.swift in Sources */,

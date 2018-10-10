@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PublishController: UIViewController {
+class PublishController: BaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
