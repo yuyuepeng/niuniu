@@ -14,7 +14,6 @@ class HomeController: BaseController , UITableViewDelegate, UITableViewDataSourc
     
     let tableView:UITableView = UITableView.init(frame: CGRect.init(x: 0, y: 64, width: YYScreenWidth, height: YYScreenHeigth - 64 - 49), style: UITableView.Style.plain)
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.view.backgroundColor = UIColor.blue
