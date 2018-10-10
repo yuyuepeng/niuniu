@@ -20,7 +20,11 @@ class HomeController: BaseController , UITableViewDelegate, UITableViewDataSourc
 //        self.view.backgroundColor = UIColor.blue
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "UITableViewCellID")
+        self.tableView.register(HomeOneCell.classForCoder(), forCellReuseIdentifier: "HomeOneCellID")
+        self.tableView.register(HomeTwoCell.classForCoder(), forCellReuseIdentifier: "HomeTwoCellID")
+        self.tableView.register(HomeThreeCell.classForCoder(), forCellReuseIdentifier: "HomeThreeCellID")
+        self.tableView.register(HomeFourthCell.classForCoder(), forCellReuseIdentifier: "HomeFourthCellID")
+
         self.view.addSubview(self.tableView)
         // Do any additional setup after loading the view.
     }
@@ -29,14 +33,39 @@ class HomeController: BaseController , UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCellID")!
-        
-        cell.selectionStyle = UITableViewCell.SelectionStyle.none
-        return cell;
+        if indexPath.section == 0 {
+            let cell:HomeOneCell = tableView.dequeueReusableCell(withIdentifier: "HomeOneCellID") as! HomeOneCell
+            
+            cell.selectionStyle = UITableViewCell.SelectionStyle.none
+            return cell
+        } else if indexPath.section == 1 {
+            let cell:HomeTwoCell = tableView.dequeueReusableCell(withIdentifier: "HomeTwoCellID") as! HomeTwoCell
+            cell.selectionStyle = UITableViewCell.SelectionStyle.none
+            return cell
+        }else if indexPath.section == 2 {
+            let cell:HomeThreeCell = tableView.dequeueReusableCell(withIdentifier: "HomeThreeCellID") as! HomeThreeCell
+            cell.selectionStyle = UITableViewCell.SelectionStyle.none
+            return cell
+        }else {
+            let cell:HomeFourthCell = tableView.dequeueReusableCell(withIdentifier: "HomeFourthCellID") as! HomeFourthCell
+            cell.selectionStyle = UITableViewCell.SelectionStyle.none
+            return cell
+        }
         
     }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 4;
+    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44
+        if indexPath.section == 0 {
+            return 100
+        } else if indexPath.section == 1 {
+            return 350
+        } else if indexPath.section == 2 {
+            return 300
+        } else {
+            return 1000
+        }
     }
     /*
     // MARK: - Navigation
