@@ -43,7 +43,7 @@ class netManager: NSObject {
     func generate(_ formData:MultipartFormData,data:NSDictionary) -> Void {
         for key in data.allKeys {
             //            遍历上传
-            var value = data.value(forKey: (key as? String)!)
+            let value = data.value(forKey: (key as? String)!)
             if value is NSDictionary {
                 //                如果value是字典，继续执行该方法
                 self.generate(formData, data: value as! NSDictionary)
