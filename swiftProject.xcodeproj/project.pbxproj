@@ -15,6 +15,7 @@
 		A618B69C216E2930001C4C86 /* HomeFourthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A618B69B216E2930001C4C86 /* HomeFourthCell.swift */; };
 		C12EC3E3216DA2480087B495 /* NewTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12EC3E2216DA2480087B495 /* NewTabbarController.swift */; };
 		C12EC3F9216DA75B0087B495 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12EC3F8216DA75B0087B495 /* Const.swift */; };
+		C1644DEE216ED39200FDE981 /* netManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1644DED216ED39200FDE981 /* netManager.swift */; };
 		C19C8D15216DC8FA00791C55 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C8D14216DC8FA00791C55 /* HomeController.swift */; };
 		C19C8D17216DC97F00791C55 /* SelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C8D16216DC97F00791C55 /* SelectController.swift */; };
 		C19C8D19216DC9BA00791C55 /* PublishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C8D18216DC9BA00791C55 /* PublishController.swift */; };
@@ -63,6 +64,7 @@
 		B1477F60186C27A6743A4F84 /* Pods-swiftProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swiftProjectUITests/Pods-swiftProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C12EC3E2216DA2480087B495 /* NewTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTabbarController.swift; sourceTree = "<group>"; };
 		C12EC3F8216DA75B0087B495 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		C1644DED216ED39200FDE981 /* netManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = netManager.swift; sourceTree = "<group>"; };
 		C19C8D14216DC8FA00791C55 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		C19C8D16216DC97F00791C55 /* SelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectController.swift; sourceTree = "<group>"; };
 		C19C8D18216DC9BA00791C55 /* PublishController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		A618B69D216E3C1C001C4C86 /* netManager */ = {
 			isa = PBXGroup;
 			children = (
+				C1644DED216ED39200FDE981 /* netManager.swift */,
 			);
 			path = netManager;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				C1A13648216CBCE900A29572 /* Sources */,
 				C1A13649216CBCE900A29572 /* Frameworks */,
 				C1A1364A216CBCE900A29572 /* Resources */,
+				80B79D4519D8CEDB2982931B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -374,6 +378,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		80B79D4519D8CEDB2982931B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-swiftProject/Pods-swiftProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swiftProject/Pods-swiftProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A339CD60EA5517CB0DDE2B64 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -448,6 +474,7 @@
 				C19C8D1B216DC9CC00791C55 /* CollectionController.swift in Sources */,
 				C19C8D17216DC97F00791C55 /* SelectController.swift in Sources */,
 				C19C8D19216DC9BA00791C55 /* PublishController.swift in Sources */,
+				C1644DEE216ED39200FDE981 /* netManager.swift in Sources */,
 				A618B69C216E2930001C4C86 /* HomeFourthCell.swift in Sources */,
 				A618B69A216E28BB001C4C86 /* HomeThreeCell.swift in Sources */,
 			);

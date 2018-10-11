@@ -23,8 +23,8 @@ class netManager: NSObject {
                 case .success(let upload, _, _):
                     upload.responseJSON { response in
                         if let value = response.result.value as? [String: AnyObject]{
-                            var dict:NSDictionary = NSDictionary.init(dictionary: value as NSDictionary);
-                            finished(dict.object(forKey: "data") as AnyObject?,"victory");
+                            let dict:NSDictionary = NSDictionary.init(dictionary: value as NSDictionary);
+                            finished(dict.object(forKey: "data") as AnyObject?,"victory")
 //                            let json = JSON(value)
                             //                            PrintLog(json)
                         }
@@ -69,11 +69,14 @@ class netManager: NSObject {
                     var a = 1
                     
                     for image:UIImage in valueArr as! [UIImage]{
-                        if UIImagePNGRepresentation(image) == nil {
-                            let imageData1:Data = UIImageJPEGRepresentation(image, 1.0)!
+                        
+                        if image.pngData() == nil {
+                            let imageData1:Data = image.jpegData(compressionQuality: 1.0)!// UIImageJPEGRepresentation(image, 1.0)!
+
+//                            let imageData1:Data = UIImageJPEGRepresentation(image, 1.0)!
                             imageData = (imageData1 as NSData) as Data
                         }else {
-                            let imageData2:Data = UIImagePNGRepresentation(image)!
+                            let imageData2:Data = image.pngData()!
                             imageData = (imageData2 as NSData) as Data
                         }
                         formData.append(imageData as Data, withName: key as! String, fileName: "\(self.uniqueString())\(a).jpg", mimeType: "image/jpg")
@@ -92,11 +95,11 @@ class netManager: NSObject {
             }else if value is UIImage {//上传单张图片
                 var imageData:Data = Data();
                 let image = (value as! UIImage)
-                if UIImagePNGRepresentation(image) == nil {
-                    let imageData1:Data = UIImageJPEGRepresentation(image, 1.0)!
+                if image.pngData() == nil {
+                    let imageData1:Data = image.jpegData(compressionQuality: 1.0)!
                     imageData = (imageData1 as NSData) as Data
                 }else {
-                    let imageData2:Data = UIImagePNGRepresentation(image)!
+                    let imageData2:Data = image.pngData()!
                     imageData = (imageData2 as NSData) as Data
                 }
                 formData.append(imageData as Data, withName: key as! String, fileName: "\(self.uniqueString()).jpg", mimeType: "image/jpg")
