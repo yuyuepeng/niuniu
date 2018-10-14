@@ -8,16 +8,36 @@
 
 import UIKit
 
-class CollectionController: BaseController {
+class CollectionController: BaseController ,UITableViewDelegate,UITableViewDataSource{
+    
+    
+    lazy var tableView: UITableView = {
+        var tableView = UITableView.init(frame: CGRect.init(x: 0, y: 64, width: YYScreenWidth, height: YYScreenHeigth - 64), style: UITableView.Style.plain)
+        tableView.delegate = self as UITableViewDelegate
+        tableView.dataSource = self as UITableViewDataSource
+        tableView.register(CollectCell.classForCoder(), forCellReuseIdentifier: "CollectCellID")
+        return tableView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addSubview(self.tableView)
+        
 //        self.view.backgroundColor = UIColor.black
 
         // Do any additional setup after loading the view.
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
+        return 6
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:CollectCell = tableView.dequeueReusableCell(withIdentifier: "CollectCellID") as! CollectCell
+        
+        return cell
+    }
     /*
     // MARK: - Navigation
 

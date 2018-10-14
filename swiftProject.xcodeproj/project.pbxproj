@@ -13,6 +13,7 @@
 		A618B698216E239D001C4C86 /* HomeTwoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A618B697216E239D001C4C86 /* HomeTwoCell.swift */; };
 		A618B69A216E28BB001C4C86 /* HomeThreeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A618B699216E28BB001C4C86 /* HomeThreeCell.swift */; };
 		A618B69C216E2930001C4C86 /* HomeFourthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A618B69B216E2930001C4C86 /* HomeFourthCell.swift */; };
+		A6807A482170D3A700C14ED9 /* CollectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6807A472170D3A700C14ED9 /* CollectCell.swift */; };
 		C12EC3E3216DA2480087B495 /* NewTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12EC3E2216DA2480087B495 /* NewTabbarController.swift */; };
 		C12EC3F9216DA75B0087B495 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12EC3F8216DA75B0087B495 /* Const.swift */; };
 		C1644DEE216ED39200FDE981 /* netManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1644DED216ED39200FDE981 /* netManager.swift */; };
@@ -60,6 +61,7 @@
 		A618B697216E239D001C4C86 /* HomeTwoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTwoCell.swift; sourceTree = "<group>"; };
 		A618B699216E28BB001C4C86 /* HomeThreeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeThreeCell.swift; sourceTree = "<group>"; };
 		A618B69B216E2930001C4C86 /* HomeFourthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFourthCell.swift; sourceTree = "<group>"; };
+		A6807A472170D3A700C14ED9 /* CollectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectCell.swift; sourceTree = "<group>"; };
 		A79E0F4F31EF3BD9E933BD16 /* Pods_swiftProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1477F60186C27A6743A4F84 /* Pods-swiftProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swiftProjectUITests/Pods-swiftProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C12EC3E2216DA2480087B495 /* NewTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTabbarController.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				A618B697216E239D001C4C86 /* HomeTwoCell.swift */,
 				A618B699216E28BB001C4C86 /* HomeThreeCell.swift */,
 				A618B69B216E2930001C4C86 /* HomeFourthCell.swift */,
+				A6807A472170D3A700C14ED9 /* CollectCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				C12EC3E3216DA2480087B495 /* NewTabbarController.swift in Sources */,
 				C19C8D1D216DC9DA00791C55 /* MineController.swift in Sources */,
 				A618B696216E1A5A001C4C86 /* HomeOneModel.swift in Sources */,
+				A6807A482170D3A700C14ED9 /* CollectCell.swift in Sources */,
 				C1A13650216CBCE900A29572 /* AppDelegate.swift in Sources */,
 				C19C8D15216DC8FA00791C55 /* HomeController.swift in Sources */,
 				C1DA12D4216E05E600E8D928 /* HomeOneCell.swift in Sources */,
@@ -656,7 +660,10 @@
 				DEVELOPMENT_TEAM = 8858GLHKNB;
 				GCC_PREFIX_HEADER = /Users/yuyuepeng/niuniu/swiftProject/Const.swift;
 				INFOPLIST_FILE = swiftProject/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = yueyuep.com.swiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -673,7 +680,10 @@
 				DEVELOPMENT_TEAM = 8858GLHKNB;
 				GCC_PREFIX_HEADER = /Users/yuyuepeng/niuniu/swiftProject/Const.swift;
 				INFOPLIST_FILE = swiftProject/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = yueyuep.com.swiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -690,7 +700,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8858GLHKNB;
 				INFOPLIST_FILE = swiftProjectTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = yueyuep.com.swiftProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -708,7 +722,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8858GLHKNB;
 				INFOPLIST_FILE = swiftProjectTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = yueyuep.com.swiftProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -725,7 +743,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8858GLHKNB;
 				INFOPLIST_FILE = swiftProjectUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = yueyuep.com.swiftProjectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -742,7 +764,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8858GLHKNB;
 				INFOPLIST_FILE = swiftProjectUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = yueyuep.com.swiftProjectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
