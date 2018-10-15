@@ -10,7 +10,7 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 class netManager: NSObject {
-    
+    typealias block = (_ name: String?) -> Void
     typealias finished = (_ response:AnyObject?, _ result:String?) ->Void
     func post(_ domain:String,path:String,form:NSDictionary,parameters:NSDictionary,finished: @escaping finished) -> Void {
         let url = self.pinjie(domain, path: path, parameters: parameters)

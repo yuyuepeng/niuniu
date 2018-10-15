@@ -10,7 +10,10 @@ import UIKit
 
 class HomeController: BaseController , UITableViewDelegate, UITableViewDataSource {
     
-    
+    lazy var netmanager: netManager = {
+        var netmanager = netManager.init()
+        return netmanager
+    }()
     
     let tableView:UITableView = UITableView.init(frame: CGRect.init(x: 0, y: 64, width: YYScreenWidth, height: YYScreenHeigth - 64 - 49), style: UITableView.Style.plain)
     
@@ -25,7 +28,13 @@ class HomeController: BaseController , UITableViewDelegate, UITableViewDataSourc
         self.tableView.register(HomeFourthCell.classForCoder(), forCellReuseIdentifier: "HomeFourthCellID")
 
         self.view.addSubview(self.tableView)
+        self.loadPersonalData()
         // Do any additional setup after loading the view.
+    }
+    func loadPersonalData() -> Void {
+        self.netmanager .post(ishootBaseUrl, path: "Index/showAdminPerson", form: ["":""], parameters: ["":""]) { (response: AnyObject?, message:String?) in
+//NSLog("", CVarArg)
+        }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
