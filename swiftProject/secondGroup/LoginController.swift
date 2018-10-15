@@ -16,19 +16,25 @@ class LoginController: BaseController {
         return headerImage
     }()
     lazy var loginButton: UIButton = {
-        let loginButton = UIButton()
+        let loginButton = UIButton.init(frame: CGRect.init(x: 30, y: 150, width: YYScreenWidth - 60, height: 80))
         loginButton.setTitle("登录", for: UIControl.State.normal)
+        loginButton.setTitleColor(UIColor.black, for: UIControl.State.normal)
         loginButton.addTarget(self, action: #selector(loginButtonClick), for: UIControl.Event.touchUpInside)
-        
         return loginButton
     }()
+    var line1:UIView!
+    
+    var timer:Timer!
     
     @objc func loginButtonClick() -> Void {
-        
     }
     func createViews() -> Void {
         self.view .addSubview(self.headerImage)
         self.view .addSubview(self.loginButton)
+        self.line1 = UIView.init(frame: CGRect.init(x: 30 * singleLength, y: self.headerImage.bottom + 321 * singleLength, width: YYScreenWidth - 60 * singleLength, height: 2 * singleLength))
+        self.line1.backgroundColor = UIColor.init().colorWithRGBA(R: 74, G: 74, B: 74, alpha: 1)
+        self.view .addSubview(self.line1)
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
