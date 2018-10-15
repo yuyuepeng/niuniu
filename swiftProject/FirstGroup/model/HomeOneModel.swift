@@ -12,7 +12,7 @@ import UIKit
 class HomeOneModel: NSObject {
     
 
-    class func jsonToModel(arr:[[String:String]]) -> [HomeOneModel] {
-        
-    }
+//    class func jsonToModel(arr:[[String:String]]) -> [HomeOneModel] {
+//        
+//    }
 }
