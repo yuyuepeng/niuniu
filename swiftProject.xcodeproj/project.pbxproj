@@ -17,6 +17,7 @@
 		C12EC3E3216DA2480087B495 /* NewTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12EC3E2216DA2480087B495 /* NewTabbarController.swift */; };
 		C12EC3F9216DA75B0087B495 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12EC3F8216DA75B0087B495 /* Const.swift */; };
 		C1644DEE216ED39200FDE981 /* netManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1644DED216ED39200FDE981 /* netManager.swift */; };
+		C1666F67217438E30043C242 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1666F66217438E30043C242 /* LoginController.swift */; };
 		C19C8D15216DC8FA00791C55 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C8D14216DC8FA00791C55 /* HomeController.swift */; };
 		C19C8D17216DC97F00791C55 /* SelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C8D16216DC97F00791C55 /* SelectController.swift */; };
 		C19C8D19216DC9BA00791C55 /* PublishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C8D18216DC9BA00791C55 /* PublishController.swift */; };
@@ -67,6 +68,7 @@
 		C12EC3E2216DA2480087B495 /* NewTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTabbarController.swift; sourceTree = "<group>"; };
 		C12EC3F8216DA75B0087B495 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		C1644DED216ED39200FDE981 /* netManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = netManager.swift; sourceTree = "<group>"; };
+		C1666F66217438E30043C242 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		C19C8D14216DC8FA00791C55 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		C19C8D16216DC97F00791C55 /* SelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectController.swift; sourceTree = "<group>"; };
 		C19C8D18216DC9BA00791C55 /* PublishController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,14 @@
 			path = netManager;
 			sourceTree = "<group>";
 		};
+		C1666F65217438BC0043C242 /* secondGroup */ = {
+			isa = PBXGroup;
+			children = (
+				C1666F66217438E30043C242 /* LoginController.swift */,
+			);
+			path = secondGroup;
+			sourceTree = "<group>";
+		};
 		C1A13643216CBCE900A29572 = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +198,7 @@
 				C1DA12CD216DFCED00E8D928 /* BaseController.swift */,
 				C12EC3E2216DA2480087B495 /* NewTabbarController.swift */,
 				C1DA12CF216E04CB00E8D928 /* FirstGroup */,
+				C1666F65217438BC0043C242 /* secondGroup */,
 				C1A13651216CBCE900A29572 /* ViewController.swift */,
 				C12EC3F8216DA75B0087B495 /* Const.swift */,
 				C1A13653216CBCE900A29572 /* Main.storyboard */,
@@ -477,6 +488,7 @@
 				C1DA12D4216E05E600E8D928 /* HomeOneCell.swift in Sources */,
 				C19C8D1B216DC9CC00791C55 /* CollectionController.swift in Sources */,
 				C19C8D17216DC97F00791C55 /* SelectController.swift in Sources */,
+				C1666F67217438E30043C242 /* LoginController.swift in Sources */,
 				C19C8D19216DC9BA00791C55 /* PublishController.swift in Sources */,
 				C1644DEE216ED39200FDE981 /* netManager.swift in Sources */,
 				A618B69C216E2930001C4C86 /* HomeFourthCell.swift in Sources */,

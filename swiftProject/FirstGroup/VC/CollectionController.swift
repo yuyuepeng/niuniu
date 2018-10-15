@@ -35,8 +35,11 @@ class CollectionController: BaseController ,UITableViewDelegate,UITableViewDataS
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:CollectCell = tableView.dequeueReusableCell(withIdentifier: "CollectCellID") as! CollectCell
-        
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
         return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
     }
     /*
     // MARK: - Navigation
