@@ -22,7 +22,7 @@ class LoginController: BaseController {
         
         return loginButton
     }()
-    
+//    var timer:
     @objc func loginButtonClick() -> Void {
         
     }
@@ -33,7 +33,7 @@ class LoginController: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.createViews()
-        
+
         // Do any additional setup after loading the view.
     }
     
