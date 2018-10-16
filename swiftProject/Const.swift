@@ -27,3 +27,5 @@ let isIphoneX = YYScreenHeigth == 812 ? true : false
 let navigationBarHeight : CGFloat = isIphoneX ? 88 : 64
 // tabBarHeight
 let tabBarHeight : CGFloat = isIphoneX ? 49 + 34 : 49
+
+let statusBarHeight : CGFloat = isIphoneX ? 44 : 20

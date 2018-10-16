@@ -13,14 +13,14 @@ class HomeTwoCell: UITableViewCell {
     
     lazy var backImage: UIImageView = {
         var backImage = UIImageView.init(frame: CGRect.init(x: 0, y: 0, width: YYScreenWidth, height: 150))
-        backImage.backgroundColor = UIColor.blue
+        backImage.backgroundColor = UIColor.white
         return backImage
     }()
     lazy var titleLabel: UILabel = {
         var titleLabel = UILabel.init(frame: CGRect.init(x: 0, y: 60, width: YYScreenWidth, height: 30))
         titleLabel.text = "安丽娜是个小狗狗"
         titleLabel.textAlignment = NSTextAlignment.center
-        titleLabel.textColor = UIColor.white
+        titleLabel.textColor = UIColor.black
         titleLabel.font = UIFont.systemFont(ofSize: 12)
         return titleLabel
     }()

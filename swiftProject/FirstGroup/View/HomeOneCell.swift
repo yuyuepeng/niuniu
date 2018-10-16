@@ -16,12 +16,12 @@ class HomeOneCell: UITableViewCell {
     }
     lazy var backimage: UIImageView = {
         var backimage = UIImageView.init(frame: CGRect.init(x: 0, y: 0, width: YYScreenWidth, height: 100));
-        backimage.backgroundColor = UIColor.black
+        backimage.backgroundColor = UIColor.white
         return backimage
     }()
     lazy var titleLabel: UILabel = {
         var titleLabel = UILabel.init(frame: CGRect.init(x: 0, y: 35, width: YYScreenWidth, height: 30));
-        titleLabel.textColor = UIColor.white
+        titleLabel.textColor = UIColor.black
         titleLabel.textAlignment = NSTextAlignment.center
         titleLabel.font = UIFont.systemFont(ofSize: 12)
         titleLabel.text = "玉岳鹏是一个小狗狗"

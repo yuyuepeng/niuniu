@@ -18,9 +18,13 @@ class CollectionController: BaseController ,UITableViewDelegate,UITableViewDataS
         tableView.register(CollectCell.classForCoder(), forCellReuseIdentifier: "CollectCellID")
         return tableView
     }()
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.mainTitle = "收藏"
         self.view.addSubview(self.tableView)
         
 //        self.view.backgroundColor = UIColor.black

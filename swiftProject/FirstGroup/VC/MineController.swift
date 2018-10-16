@@ -13,10 +13,13 @@ class MineController: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.view.backgroundColor = UIColor.green
-
+        self.mainTitle = "我的"
         // Do any additional setup after loading the view.
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
 
     /*
     // MARK: - Navigation

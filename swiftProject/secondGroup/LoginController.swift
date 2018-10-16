@@ -46,8 +46,10 @@ class LoginController: BaseController {
         self.view .addSubview(self.line1)
         self.line2 = UIView.init(frame: CGRect.init(x: 30 * singleLength, y: self.line1.bottom + 132 * singleLength, width: YYScreenWidth - 60 * singleLength, height: 2 * singleLength))
         self.line2.backgroundColor = UIColor().colorWithRGBA(R: 74, G: 74, B: 74, alpha: 1)
-        self.view.addSubview(self.line2)
         
+        
+        
+        self.view.addSubview(self.line2)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

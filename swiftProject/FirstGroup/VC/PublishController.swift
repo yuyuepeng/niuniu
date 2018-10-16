@@ -10,8 +10,13 @@ import UIKit
 
 class PublishController: BaseController {
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.mainTitle = "发布"
 //        self.view.backgroundColor = UIColor.brown
 
         // Do any additional setup after loading the view.

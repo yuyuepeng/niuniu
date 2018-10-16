@@ -9,17 +9,17 @@
 import UIKit
 
 class HomeController: BaseController , UITableViewDelegate, UITableViewDataSource {
-    
-    lazy var netmanager: netManager = {
-        var netmanager = netManager.init()
-        return netmanager
-    }()
+
     
     let tableView:UITableView = UITableView.init(frame: CGRect.init(x: 0, y: 64, width: YYScreenWidth, height: YYScreenHeigth - 64 - 49), style: UITableView.Style.plain)
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.view.backgroundColor = UIColor.blue
+        self.mainTitle = "首页"
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(HomeOneCell.classForCoder(), forCellReuseIdentifier: "HomeOneCellID")
@@ -31,6 +31,7 @@ class HomeController: BaseController , UITableViewDelegate, UITableViewDataSourc
         self.loadPersonalData()
         // Do any additional setup after loading the view.
     }
+    
     func loadPersonalData() -> Void {
         self.netmanager .post(ishootBaseUrl, path: "Index/showAdminPerson", form: ["":""], parameters: ["":""]) { (response: AnyObject?, message:String?) in
 //NSLog("", CVarArg)

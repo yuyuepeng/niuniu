@@ -10,8 +10,13 @@ import UIKit
 
 class SelectController: BaseController {
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.mainTitle = "真选"
 //        self.view.backgroundColor = UIColor.gray
 
         // Do any additional setup after loading the view.
