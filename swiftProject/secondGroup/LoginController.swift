@@ -46,10 +46,32 @@ class LoginController: BaseController {
         self.view .addSubview(self.line1)
         self.line2 = UIView.init(frame: CGRect.init(x: 30 * singleLength, y: self.line1.bottom + 132 * singleLength, width: YYScreenWidth - 60 * singleLength, height: 2 * singleLength))
         self.line2.backgroundColor = UIColor().colorWithRGBA(R: 74, G: 74, B: 74, alpha: 1)
-        
-        
-        
         self.view.addSubview(self.line2)
+//        for (NSInteger i = 0; i <  2; i ++) {
+//            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(95 * singleLength, self.headImage.bottom + 235 * singleLength + 146 * singleLength * i, 200 * singleLength, 27 * singleLength)];
+//            label.size = [@"手机号登录" sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]}];
+//            label.text = arr[i];
+//            label.textColor = RGB(74, 74, 74);
+//            label.textAlignment = NSTextAlignmentCenter;
+//            label.font = [UIFont systemFontOfSize:13];
+//            [self.view addSubview:label];
+//        }
+        let arr:[String] = ["手机号登录","验  证  码"]
+        var i = 0
+
+        for str:String in arr {
+            let label:UILabel = UILabel.init(frame: CGRect.init(x: 95 * singleLength, y: self.headerImage.bottom + 235 * singleLength + CGFloat(i) * 146 * singleLength, width: 200 * singleLength, height: 27 * singleLength))
+            label.text = str
+            label.textColor = UIColor().colorWithRGBA(R: 74, G: 74, B: 74, alpha: 1)
+            label.textAlignment = NSTextAlignment.center
+            label.font = UIFont.systemFont(ofSize: 13)
+            let size:CGSize = NSString(string: "手机号登录").size(withAttributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 13)])
+            label.width = size.width
+            
+            self.view .addSubview(label)
+//                        label.size = "手机号登录".s
+            i += 1
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
