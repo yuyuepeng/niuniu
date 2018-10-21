@@ -11,7 +11,7 @@ import UIKit
 class BaseController: UIViewController ,UIGestureRecognizerDelegate{
 
     lazy var titleLabel: UILabel = {
-        let titleLabel = UILabel.init(frame: CGRect.init(x: 0, y: statusBarHeight, width: YYScreenWidth, height: navigationBarHeight))
+        let titleLabel = UILabel.init(frame: CGRect.init(x: 0, y: statusBarHeight, width: YYScreenWidth, height: navigationBarHeight - statusBarHeight))
         titleLabel.numberOfLines = 0
         titleLabel.textColor = UIColor.white
         titleLabel.font = UIFont.systemFont(ofSize: 17)
@@ -19,7 +19,7 @@ class BaseController: UIViewController ,UIGestureRecognizerDelegate{
         return titleLabel
     }()
     lazy var backButton:UIButton = {
-        let backButton = UIButton.init(frame: CGRect.init(x: 0, y: 0, width: navigationBarHeight - statusBarHeight, height: navigationBarHeight - statusBarHeight))
+        let backButton = UIButton.init(frame: CGRect.init(x: 0, y: statusBarHeight, width: navigationBarHeight - statusBarHeight, height: navigationBarHeight - statusBarHeight))
         let image:UIImage = UIImage.init(named: "fanhui")!
         backButton .setImage(image, for: UIControl.State.normal)
         backButton.addTarget(self, action: #selector(backButtonClick), for: UIControl.Event.touchUpInside)
@@ -70,6 +70,8 @@ class BaseController: UIViewController ,UIGestureRecognizerDelegate{
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
         self.view.backgroundColor = UIColor.white
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboradWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDissmiss(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         self.view .addSubview(self.navigationBar)
         self.navigationBar .addSubview(self.titleLabel)
         self.navigationBar.addSubview(self.backButton)
@@ -79,14 +81,12 @@ class BaseController: UIViewController ,UIGestureRecognizerDelegate{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = true
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboradWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDissmiss(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
     }
-    @objc func keyboradWillShow(notification:Notification) -> Void {
+    @objc public func keyboradWillShow(notification:Notification) -> Void {
         
     }
-    @objc func keyboardWillDissmiss(notification:Notification) -> Void {
+    @objc public func keyboardWillDissmiss(notification:Notification) -> Void {
         
     }
     override func viewWillDisappear(_ animated: Bool) {
