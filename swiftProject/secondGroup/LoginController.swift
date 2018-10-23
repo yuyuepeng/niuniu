@@ -55,14 +55,20 @@ class LoginController: BaseController {
         return yanzhengCode
     }()
     lazy var countTime: UILabel = {
-        let  countTime : UILabel = UILabel.init(frame: CGRect.init(x: YYScreenWidth - 257 * singleLength, y: self.headerImage.bottom + 235 * singleLength + 146 * singleLength + 2 * singleLength, width: 235 * singleLength, height: 27 * singleLength))
+        let  countTime : UILabel = UILabel.init(frame: CGRect.init(x: YYScreenWidth - 257 * singleLength, y: self.headerImage.bottom + 235 * singleLength + 132 * singleLength, width: 185 * singleLength, height: 67 * singleLength))
         countTime.text = "获取验证码"
         countTime.textColor = UIColor.white
+        countTime.textAlignment = NSTextAlignment.center
+        countTime.font = UIFont.systemFont(ofSize: 13)
         countTime.backgroundColor = UIColor.init().colorWithRGBA(R: 74, G: 74, B: 74, alpha: 1)
+        countTime.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(countTimeTap)))
 //        countTime.
         return countTime
     }()
-    
+    @objc func countTimeTap() -> Void {
+        
+        
+    }
     @objc func loginButtonClick() -> Void {
         
     }
@@ -106,6 +112,7 @@ class LoginController: BaseController {
         }
         self.view .addSubview(self.phoneNum)
         self.view .addSubview(self.yanzhengCode)
+        self.view .addSubview(self.countTime)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,7 +120,51 @@ class LoginController: BaseController {
 
         // Do any additional setup after loading the view.
     }
-    
+    override func keyboradWillShow(notification: Notification) {
+        let dict : Dictionary = notification.userInfo!
+        let value : NSValue = dict[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue
+        let rect : CGRect = value.cgRectValue
+        let height:CGFloat = rect.height
+        self.view.frame = CGRect.init(x: 0, y: -height/2, width: YYScreenWidth, height: YYScreenHeigth)
+        
+        
+    }
+    override func keyboardWillDissmiss(notification: Notification) {
+//        let dict : Dictionary = notification.userInfo!
+//        let value : NSValue = dict[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue
+//        let rect : CGRect = value.cgRectValue
+//        let height:CGFloat = rect.height
+        self.view.frame = CGRect.init(x: 0, y: 0, width: YYScreenWidth, height: YYScreenHeigth)
+    }
+//    - (void)keyboardWillHide:(NSNotification *)notification {
+//    NSDictionary *userInfo = [notification userInfo];
+//    NSValue *aValue = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];
+//    CGRect keyboardRect = [aValue CGRectValue];
+//    int height = keyboardRect.size.height;
+//    NSLog(@"键盘高度是  %d",height);
+//    self.view.frame =  CGRectMake(0, 0, SCREENW, SCREENH);
+//    declareWeakSelf
+//    [self.loginButton mas_makeConstraints:^(MASConstraintMaker *make) {
+//    make.centerX.equalTo(weakself.view);
+//    make.size.mas_equalTo(CGSizeMake(600 * singleLength, 90 * singleLength));
+//    make.bottom.equalTo(weakself.view).with.offset(-160 * singleLength);
+//    }];
+//    }
+//
+//    - (void)keyboardWillShow:(NSNotification *)notification {
+//    NSDictionary *userInfo = [notification userInfo];
+//    NSValue *aValue = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];
+//    CGRect keyboardRect = [aValue CGRectValue];
+//    int height = keyboardRect.size.height;
+//    NSLog(@"键盘高度是  %d   ",height);
+//    self.view.frame =  CGRectMake(0, - height/2, SCREENW, SCREENH);
+//    declareWeakSelf
+//    [self.loginButton mas_makeConstraints:^(MASConstraintMaker *make) {
+//    make.centerX.equalTo(weakself.view);
+//    make.size.mas_equalTo(CGSizeMake(600 * singleLength, 90 * singleLength));
+//    make.bottom.equalTo(weakself.view).with.offset(- height/2 - 90 * singleLength);
+//    }];
+//    }
 
     /*
     // MARK: - Navigation
