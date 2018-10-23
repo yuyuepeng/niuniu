@@ -66,7 +66,9 @@ class LoginController: BaseController {
         return countTime
     }()
     @objc func countTimeTap() -> Void {
-        
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (timer) in
+            
+        })
         
     }
     @objc func loginButtonClick() -> Void {
